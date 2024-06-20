@@ -26,7 +26,7 @@ const logInUserService = async (payload: Partial<TUser>) => {
 
   const tokenObj = { email: user.email, role: user.role };
   const token = createToken(tokenObj, "10d");
-  const { address, email, name, phone, role } = user;
+  //   const { address, email, name, phone, role } = user;
   const userResponse = await User.findOne({ email: user.email });
   return { token, user: userResponse };
 };
