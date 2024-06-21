@@ -47,7 +47,7 @@ export const isAuthenticatedUser = catchAsync(async (req, res, next) => {
   next();
 });
 
-export const authorizeRoles = (...roles: any) => {
+export const authorizedRoles = (...roles: any) => {
   return (req: any, res: Response, next: NextFunction) => {
     if (!roles.includes(req.user?.role)) {
       return res.json({

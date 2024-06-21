@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { authorizeRoles, isAuthenticatedUser } from "../../middleware/auth";
+import { authorizedRoles, isAuthenticatedUser } from "../../middleware/auth";
 import { validSchema } from "../../middleware/validator";
 import {
   createServiceIntoDB,
@@ -14,7 +14,7 @@ const router = Router();
 router.post(
   "/",
   isAuthenticatedUser,
-  authorizeRoles("admin"),
+  authorizedRoles("admin"),
   validSchema(serviceValidation.serviceValidationSchema),
   createServiceIntoDB
 );
@@ -24,13 +24,13 @@ router.get("/:id", getServiceById);
 router.put(
   "/:id",
   isAuthenticatedUser,
-  authorizeRoles("admin"),
+  authorizedRoles("admin"),
   updateServiceById
 );
 router.delete(
   "/:id",
   isAuthenticatedUser,
-  authorizeRoles("admin"),
+  authorizedRoles("admin"),
   deleteServiceById
 );
 
