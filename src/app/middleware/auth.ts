@@ -41,6 +41,7 @@ export const isAuthenticatedUser = catchAsync(async (req, res, next) => {
       statusCode: 404,
     });
   }
+  req.user = user;
 
   next();
 });

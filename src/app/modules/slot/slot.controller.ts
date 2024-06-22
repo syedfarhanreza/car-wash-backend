@@ -1,7 +1,7 @@
 import { catchAsync } from "../../utils/catchAsync";
 import sendResponse from "../../utils/sendResponse";
 import { Service } from "../service/service.model";
-import slotService from "./slot.service";
+import { slotService } from "./slot.service";
 
 const { createSlot, getAllAvailableSlotsService } = slotService;
 
@@ -41,8 +41,8 @@ export const getAllAvailableSlots = catchAsync(async (req, res) => {
   }
   sendResponse(res, {
     message: "No data found",
-    data: [],
     success: false,
     statusCode: 404,
+    data: [],
   });
 });

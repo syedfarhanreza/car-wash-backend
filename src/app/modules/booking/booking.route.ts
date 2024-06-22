@@ -13,7 +13,7 @@ router.post(
   authorizedRoles("user"),
   createBookingIntoDB
 );
-router.get("/", isAuthenticatedUser, authorizedRoles("user"), getAllBookings);
+router.get("/", isAuthenticatedUser, authorizedRoles("admin"), getAllBookings);
 
 router.get(
   "/my-bookings",

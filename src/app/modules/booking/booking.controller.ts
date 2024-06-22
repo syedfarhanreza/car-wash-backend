@@ -10,19 +10,9 @@ const { createBookingService, getAllBookingService, getUserBookingsService } =
   bookingService;
 
 export const createBookingIntoDB = catchAsync(async (req, res) => {
-  //   const vehicle = {
-  //     serviceId: "60d9c4e4f3b4b544b8b8d1c5",
-  //     slotId: "60d9c4e4f3b4b544b8b8d1c6",
-  //     vehicleType: "car",
-  //     vehicleBrand: "Toyota",
-  //     vehicleModel: "Camry",
-  //     manufacturingYear: 2020,
-  //     registrationPlate: "ABC123",
-  //   };
-
   const { body } = req;
-
   const user = req.user;
+
   const isValidObjId = isValidObjectId(body.serviceId);
   if (!isValidObjId) {
     return sendResponse(res, {

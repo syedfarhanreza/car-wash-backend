@@ -36,9 +36,7 @@ const getAllAvailableSlotsService = async (query: TAnyObject) => {
   return result;
 };
 
-const slotService = {
+export const slotService = {
   createSlot,
   getAllAvailableSlotsService,
 };
-
-export default slotService;
