@@ -35,4 +35,4 @@ const BookingSchema = z
     }
   );
 
-type TBooking = z.infer<typeof BookingSchema>;
+export type TBooking = z.infer<typeof BookingSchema>;
