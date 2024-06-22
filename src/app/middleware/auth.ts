@@ -42,8 +42,6 @@ export const isAuthenticatedUser = catchAsync(async (req, res, next) => {
     });
   }
 
-  req.user = user;
-
   next();
 });
 
