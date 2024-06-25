@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import QueryBuilder from "../../builder/QueryBuilder";
 import { TAnyObject } from "../../interface/error";
 import TSlot from "./slot.interface";
@@ -30,13 +31,25 @@ const createSlot = async (payload: TSlot, duration: number) => {
 };
 
 const getAllAvailableSlotsService = async (query: TAnyObject) => {
+  if (query.serviceId) {
+    query.service = new mongoose.Types.ObjectId(query.serviceId);
+    delete query.serviceId;
+  }
+
   const find = Slot.find({ isBooked: "available" }).populate("service");
-  const queryBuilder = new QueryBuilder(find, query).filter();
-  const result = await queryBuilder.modelQuery;
+  const queryBuilder = new QueryBuilder(find, query)
+    .filter()
+    .sort()
+    .paginate()
+    .fields();
+  const result = await queryBuilder.modelQuery.exec();
+
   return result;
 };
 
-export const slotService = {
+const slotService = {
   createSlot,
   getAllAvailableSlotsService,
 };
+
+export default slotService;
