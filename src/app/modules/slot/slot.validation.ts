@@ -32,7 +32,7 @@ const BookingSchema = z
     {
       message: "startTime must be earlier than endTime",
       path: ["startTime"],
-    }
+    },
   );
 
 export type TBooking = z.infer<typeof BookingSchema>;

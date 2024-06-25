@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import createToken from "../../utils/jwtToken";
 import TUser from "./user.interface";
 import { User } from "./user.model";

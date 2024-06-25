@@ -7,7 +7,7 @@ router.post(
   "/slots",
   isAuthenticatedUser,
   authorizedRoles("admin"),
-  createSlotsIntoDB
+  createSlotsIntoDB,
 );
 router.get("/availability", getAllAvailableSlots);
 export const slotRoutes = router;

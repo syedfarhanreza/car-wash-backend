@@ -16,7 +16,7 @@ router.post(
   isAuthenticatedUser,
   authorizedRoles("admin"),
   validSchema(serviceValidation.serviceValidationSchema),
-  createServiceIntoDB
+  createServiceIntoDB,
 );
 
 router.get("/", getAllServiceFromDB);
@@ -25,13 +25,13 @@ router.put(
   "/:id",
   isAuthenticatedUser,
   authorizedRoles("admin"),
-  updateServiceById
+  updateServiceById,
 );
 router.delete(
   "/:id",
   isAuthenticatedUser,
   authorizedRoles("admin"),
-  deleteServiceById
+  deleteServiceById,
 );
 
 const serviceRoutes = router;

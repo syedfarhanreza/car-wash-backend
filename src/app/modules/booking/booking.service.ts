@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Slot } from "../slot/slot.model";
 import { TBooking } from "./booking.interface";
 import Booking from "./booking.model";

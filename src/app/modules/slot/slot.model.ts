@@ -29,7 +29,7 @@ const bookingSchema = new Schema<TSlot>(
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 export const Slot = model("Slot", bookingSchema);

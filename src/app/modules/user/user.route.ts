@@ -7,12 +7,12 @@ const router = Router();
 router.post(
   "/signup",
   validSchema(UserValidation.userValidationSchema),
-  createUserIntoDB
+  createUserIntoDB,
 );
 router.post(
   "/login",
   validSchema(UserValidation.loginValidationSchema),
-  logInUser
+  logInUser,
 );
 
 const userRoutes = router;

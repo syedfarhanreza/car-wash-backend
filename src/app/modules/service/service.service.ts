@@ -24,7 +24,7 @@ const deleteSingleService = async (id: string) => {
   const result = await Service.findByIdAndUpdate(
     id,
     { isDeleted: true },
-    { new: true }
+    { new: true },
   );
   return result;
 };

@@ -8,7 +8,6 @@ export const validSchema = (schema: AnyZodObject) => {
     if (success) {
       next();
     } else {
-      console.log(error);
       next(error);
     }
   };

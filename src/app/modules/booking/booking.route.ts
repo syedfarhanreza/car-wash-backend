@@ -11,7 +11,7 @@ router.post(
   "/",
   isAuthenticatedUser,
   authorizedRoles("user"),
-  createBookingIntoDB
+  createBookingIntoDB,
 );
 router.get("/", isAuthenticatedUser, authorizedRoles("admin"), getAllBookings);
 
@@ -19,7 +19,7 @@ router.get(
   "/my-bookings",
   isAuthenticatedUser,
   authorizedRoles("user"),
-  getUserBookings
+  getUserBookings,
 );
 
 const bookingRoutes = router;

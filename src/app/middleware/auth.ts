@@ -31,7 +31,7 @@ export const isAuthenticatedUser = catchAsync(async (req, res, next) => {
   }
 
   const user = await User.findOne({ email: decoded?.email }).select(
-    "-password"
+    "-password",
   );
   if (!user) {
     return sendResponse(res, {

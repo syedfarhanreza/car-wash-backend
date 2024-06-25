@@ -44,7 +44,7 @@ const bookingSchema = new Schema<TBooking>(
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 const Booking = model("Booking", bookingSchema);
