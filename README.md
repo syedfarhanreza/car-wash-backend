@@ -34,6 +34,8 @@ Create a `.env`  file in the root directory and add the following:
 ```sh
 MONGO_URI=your_mongo_db_connection_string
 PORT=5000
+NODE_ENV="development"
+JWT_ACCESS_SECRET= create jwt secret token
 ```
 
 ## Start the server
