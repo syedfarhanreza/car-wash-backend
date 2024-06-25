@@ -35,6 +35,7 @@ Create a `.env`  file in the root directory and add the following:
 MONGO_URI=your_mongo_db_connection_string
 PORT=5000
 NODE_ENV="development"
+BCRYPT_SALT_ROUNDS= add number of rounds (ex- 8,12)
 JWT_ACCESS_SECRET= create jwt secret token
 ```
 
