@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Hello Car-wash Server!!!");
+  res.send("Welcome to Car-wash Server!!!");
 });
 app.use("/api", router);
 // 404 Handler
