@@ -17,7 +17,6 @@ const validSchema = (schema) => {
             next();
         }
         else {
-            console.log(error);
             next(error);
         }
     });

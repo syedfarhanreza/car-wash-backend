@@ -13,6 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.bookingService = void 0;
+/* eslint-disable @typescript-eslint/no-unused-vars */
 const slot_model_1 = require("../slot/slot.model");
 const booking_model_1 = __importDefault(require("./booking.model"));
 const createBookingService = (payload) => __awaiter(void 0, void 0, void 0, function* () {
