@@ -19,7 +19,7 @@ This project is an Express application built with TypeScript, integrating MongoD
 # Installation 
 ## Clone the repository
 ```sh
- git clone  https://github.com/syedfarhanreza/e-commerce.git
+ git clone  https://github.com/syedfarhanreza/car-wash-backend.git
  cd e-commerce
 ```
 
